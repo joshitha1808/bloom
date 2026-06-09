@@ -1,10 +1,11 @@
-import 'package:bloom/features/onboarding/view/pages/onboarding_page.dart';
+import 'package:bloom/features/authentication/view/signin_page.dart';
 import 'package:bloom/init_dependencies.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-void main() async{
+void main() async {
   await initDependencies();
-  runApp(const MainApp());
+  runApp(ProviderScope(child: const MainApp()));
 }
 
 class MainApp extends StatelessWidget {
@@ -12,6 +13,6 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(home: OnboardingPage());
+    return const MaterialApp(home: SigninPage());
   }
 }
