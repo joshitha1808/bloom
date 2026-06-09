@@ -1,3 +1,4 @@
+import 'package:bloom/features/authentication/view/signin_page.dart';
 import 'package:bloom/features/onboarding/view/widgets/onboarding_slide.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
@@ -22,10 +23,10 @@ class OnboardingPageState extends ConsumerState<OnboardingPage> {
         curve: Curves.ease,
       );
     } else {
-      // Navigator.push(
-      //   context,
-      //   MaterialPageRoute<void>(builder: (context) => const LoginPage()),
-      // );
+      Navigator.push(
+        context,
+        MaterialPageRoute<void>(builder: (context) => const SigninPage()),
+      );
     }
   }
 
