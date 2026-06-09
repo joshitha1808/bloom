@@ -1,4 +1,4 @@
-import 'package:bloom/features/authentication/view/signin_page.dart';
+import 'package:bloom/features/mood/view/mood_page.dart';
 import 'package:bloom/init_dependencies.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -13,6 +13,9 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(home: SigninPage());
+    return const MaterialApp(
+      home: MoodViewPage(),
+      debugShowCheckedModeBanner: false,
+    );
   }
 }
