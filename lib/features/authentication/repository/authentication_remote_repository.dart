@@ -62,7 +62,7 @@ class AuthenticationRemoteRepository {
     }
   }
 
-  Future<Either<Failure, UserModel>> SignIn({
+  Future<Either<Failure, UserModel>> signIn({
     required String email,
     required String password,
   }) async {
