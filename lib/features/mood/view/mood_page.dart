@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:firebase_auth/firebase_auth.dart';
 import 'widgets/mood_chip.dart';
+import 'widgets/mood_suggestion_bottom_sheet.dart';
 
 class MoodViewPage extends StatefulWidget {
   const MoodViewPage({super.key});
@@ -10,26 +10,17 @@ class MoodViewPage extends StatefulWidget {
 }
 
 class _MoodViewPageState extends State<MoodViewPage> {
-  String? selectedMood;
+  Mood? selectedMood;
   String userName = "User";
 
   final moods = const [
-    {"label": "Happy", "icon": Icons.sentiment_satisfied},
-    {"label": "Sad", "icon": Icons.sentiment_dissatisfied},
-    {"label": "Angry", "icon": Icons.sentiment_very_dissatisfied},
-    {"label": "Calm", "icon": Icons.self_improvement},
-    {"label": "Anxious", "icon": Icons.psychology},
+    Mood.happy,
+    Mood.sad,
+    Mood.angry,
+    Mood.calm,
+    Mood.anxious,
   ];
-  @override
-  void initState() {
-    super.initState();
 
-    // Firebase username
-    final user = FirebaseAuth.instance.currentUser;
-    userName = user?.displayName ?? "User";
-  }
-
-  //Dynamic greeting based on time
   String getMoodPrompt() {
     final hour = DateTime.now().hour;
 
@@ -76,13 +67,14 @@ class _MoodViewPageState extends State<MoodViewPage> {
               runSpacing: 10,
               children: moods.map((mood) {
                 return MoodChip(
-                  label: mood["label"] as String,
-                  icon: mood["icon"] as IconData,
-                  isSelected: selectedMood == mood["label"],
+                  label: mood.label,
+                  icon: mood.icon,
+                  isSelected: selectedMood == mood,
                   onTap: () {
                     setState(() {
-                      selectedMood = mood["label"] as String;
+                      selectedMood = mood;
                     });
+                    showMoodSuggestions(context, mood);
                   },
                 );
               }).toList(),
@@ -93,7 +85,7 @@ class _MoodViewPageState extends State<MoodViewPage> {
                 onPressed: selectedMood == null
                     ? null
                     : () {
-                        debugPrint("Selected Mood: $selectedMood");
+                        debugPrint("Selected Mood: ${selectedMood!.label}");
                       },
                 child: const Text("Save Mood"),
               ),
