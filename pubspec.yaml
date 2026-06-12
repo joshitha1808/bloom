@@ -22,6 +22,7 @@ dependencies:
   json_annotation: ^4.11.0
   http: ^1.6.0
   just_audio: ^0.10.5
+  audio_waveforms: ^2.0.2
 
 dev_dependencies:
   flutter_test:
@@ -36,4 +37,6 @@ flutter:
   uses-material-design: true
   assets:
     - assets/images/onboarding/
-    - assets/audio/
+    - assets/audios/
+    - assets/images/meditation/
+    - assets/images/mood/
