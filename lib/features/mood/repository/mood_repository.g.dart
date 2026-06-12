@@ -48,4 +48,4 @@ final class MoodRepositoryProvider
   }
 }
 
-String _$moodRepositoryHash() => r'c31c09f478af6bee4c0ed4d44ccafc06e06de4ed';
+String _$moodRepositoryHash() => r'6ea907fc2a5e9cf59c612695ed9e0ca10217fcb6';
