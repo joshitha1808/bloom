@@ -1,5 +1,5 @@
 import 'package:bloom/features/breathing/model/breathing_model.dart';
-import 'package:bloom/features/breathing/repository/breathing_remote_repository.dart';
+import 'package:bloom/features/breathing/repository/breathing_local_repository.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 
 part 'breathing_viewmodel.g.dart';

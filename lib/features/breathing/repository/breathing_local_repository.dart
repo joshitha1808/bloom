@@ -3,7 +3,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 import 'package:bloom/init_dependencies.dart';
 
-part 'breathing_remote_repository.g.dart';
+part 'breathing_local_repository.g.dart';
 
 @riverpod
 BreathingRepository breathingRepository(Ref ref) {

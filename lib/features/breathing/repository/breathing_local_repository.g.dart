@@ -1,6 +1,6 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'breathing_remote_repository.dart';
+part of 'breathing_local_repository.dart';
 
 // **************************************************************************
 // RiverpodGenerator
