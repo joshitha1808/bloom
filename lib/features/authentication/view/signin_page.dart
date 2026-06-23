@@ -1,6 +1,6 @@
 import 'package:bloom/core/utils/show_snackbar.dart';
 import 'package:bloom/features/authentication/view/signup_page.dart';
-import 'package:bloom/features/authentication/view/widgets/auth_gradient_page.dart';
+import 'package:bloom/core/widgets/auth_gradient_page.dart';
 import 'package:bloom/features/authentication/viewmodel/auth_viewmodel.dart';
 import 'package:bloom/features/home/view/home_page.dart';
 import 'package:flutter/material.dart';
