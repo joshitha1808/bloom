@@ -1,4 +1,4 @@
-import 'package:bloom/features/journal/view/journal_page.dart';
+import 'package:bloom/features/breathing/view/breathing_home_page.dart';
 import 'package:bloom/init_dependencies.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -15,7 +15,7 @@ class MainApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: JournalPage(uid: '123'),
+      home: BreathingHomePage(),
     );
   }
 }
