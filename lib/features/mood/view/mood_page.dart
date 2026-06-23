@@ -1,6 +1,6 @@
+import 'package:bloom/core/widgets/mood_chip.dart';
+import 'package:bloom/core/widgets/mood_suggestion_bottom_sheet.dart';
 import 'package:flutter/material.dart';
-import 'widgets/mood_chip.dart';
-import 'widgets/mood_suggestion_bottom_sheet.dart';
 
 class MoodViewPage extends StatefulWidget {
   const MoodViewPage({super.key});
