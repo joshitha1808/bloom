@@ -6,12 +6,8 @@ part 'breathing_viewmodel.g.dart';
 
 @riverpod
 class BreathingViewModel extends _$BreathingViewModel {
-  late final BreathingRepository _repository;
-
   @override
   AsyncValue<List<BreathingModel>> build() {
-    _repository = ref.watch(breathingRepositoryProvider);
-
     return const AsyncData([]);
   }
 
@@ -19,7 +15,9 @@ class BreathingViewModel extends _$BreathingViewModel {
     state = const AsyncLoading();
 
     try {
-      final exercises = await _repository.getExercises();
+      final repository = ref.read(breathingRepositoryProvider);
+
+      final exercises = await repository.getExercises();
 
       state = AsyncData(exercises);
     } catch (e) {
