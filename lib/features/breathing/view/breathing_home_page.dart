@@ -14,10 +14,8 @@ class _BreathingHomePageState extends ConsumerState<BreathingHomePage> {
   @override
   void initState() {
     super.initState();
-
-    Future.microtask(() {
       ref.read(breathingViewModelProvider.notifier).fetchExercises();
-    });
+    
   }
 
   @override
