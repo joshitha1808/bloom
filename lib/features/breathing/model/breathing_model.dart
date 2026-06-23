@@ -11,6 +11,7 @@ class BreathingModel {
   final int hold1;
   final int exhale;
   final int hold2;
+  final int totalCycles;
 
   const BreathingModel({
     required this.id,
@@ -20,6 +21,7 @@ class BreathingModel {
     required this.hold1,
     required this.exhale,
     required this.hold2,
+    required this.totalCycles,
   });
 
   Map<String, dynamic> toMap() {
@@ -31,6 +33,7 @@ class BreathingModel {
       'hold1': hold1,
       'exhale': exhale,
       'hold2': hold2,
+      'totalCycles': totalCycles,
     };
   }
 
@@ -43,6 +46,7 @@ class BreathingModel {
       hold1: map['hold1'] as int,
       exhale: map['exhale'] as int,
       hold2: map['hold2'] as int,
+      totalCycles: map['totalCycles'] as int,
     );
   }
 
