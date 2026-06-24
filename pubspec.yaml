@@ -23,6 +23,8 @@ dependencies:
   http: ^1.6.0
   just_audio: ^0.10.5
   audio_waveforms: ^2.0.2
+  googleai_dart: ^8.0.0
+  speech_to_text: ^7.4.0
 
 dev_dependencies:
   flutter_test:
